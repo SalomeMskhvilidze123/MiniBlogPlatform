@@ -7,4 +7,15 @@
 
 import Foundation
 
+class PostViewModel {
+    let apiService = APIClient()
+    
+    
+    func loadPostsFromServer(){
+        apiService.fetchPosts { result in
+            print(result)
+        }
+    }
+}
+
 
